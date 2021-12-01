@@ -1,7 +1,7 @@
 require("dotenv").config();
 const alchemyKey = process.env.REACT_APP_ALCHEMY_KEY;
-const contractABI = require("./contract-abi.json");
 const contractAddress = process.env.REACT_APP_CONTRACT_ADDRESS;
+const contractABI = require("./contract-abi.json");
 const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
 const web3 = createAlchemyWeb3(alchemyKey);
 
@@ -87,7 +87,7 @@ async function loadContract() {
   return new web3.eth.Contract(contractABI, contractAddress);
 }
 
-export const publicMint = async (mintAmount) => {
+export const mint = async (mintAmount) => {
 	if (mintAmount.trim() == "") {
 	  return {
 		success: false,
@@ -104,9 +104,10 @@ export const publicMint = async (mintAmount) => {
 	const transactionParameters = {
 	  to: contractAddress, // Required except during contract publications.
 	  from: window.ethereum.selectedAddress, // must match user's active address.
-	  value: Number(1e16).toString(16),
+	  value: (Number(6e16)* mintAmount).toString(16),
 	  data: window.contract.methods
-		.publicMint(mintAmount)
+		// .publicMint(mintAmount)
+		.presaleMint(mintAmount)
 		.encodeABI(),
 	};
 

@@ -2,11 +2,10 @@ import { useEffect, useState } from "react";
 import {
 	connectWallet,
 	getCurrentWalletConnected,
-	publicMint,
+	mint,
 } from "./interact.js";
 
 require("dotenv").config();
-const contractAddress = process.env.CONTRACT_ADDRESS;
 
 const Minter = (props) => {
   const [walletAddress, setWallet] = useState("");
@@ -55,7 +54,7 @@ const Minter = (props) => {
   };
 
   const onMintPressed = async () => {
-    const { success, status } = await publicMint(mintAmount);
+    const { success, status } = await mint(mintAmount);
     setStatus(status);
     if (success) {
       setMintAmount("");
@@ -76,10 +75,7 @@ const Minter = (props) => {
       </button>
 
       <br></br>
-      <div className="app">
-        {"Contract address: "}  + <p>{process.env.CONTRACT_ADDRESS}</p>
-      </div>
-      {"Contract address: "} <p>{contractAddress}</p>
+      {"Contract address: "} <p>{process.env.REACT_APP_CONTRACT_ADDRESS}</p>
 
       <h1 id="title">The Leading Crew NFT Minter</h1>
       <p>Enter the amount of NFTs you wish to mint and press "Mint"</p>

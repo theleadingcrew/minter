@@ -1,4 +1,5 @@
 - [Initialization](#initialization)
+- [Pre-Sale vs Actual Mint](#pre-sale-vs-actual-mint)
 - [Deployment](#deployment)
 
 ## Initialization
@@ -24,6 +25,9 @@ The initialization files required are:
   - line 4: `"homepage": "https://test.theleadingcrew.io",`
   - line 20: `"predeploy": "npm run build",`
   - line 21: `"deploy": "gh-pages -d build",`
+
+## Pre-Sale vs Actual Mint
+To switch between pre-sale mint and actual mint, toggle the comments in `interact.js` line 109 and 110.
 
 ## Deployment
 For local testing, run
