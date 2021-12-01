@@ -39,8 +39,12 @@ For live deployment, run
 ```
 npm run deploy
 ```
+
 This will create a `gh-pages` branch and push the branch onto git.
-Next, start a subdomain page using the `CNAME Record`.
+Next, start a subdomain page using the `CNAME Record` on the domain provider.
 Set the root page on git to the `gh-pages` branch.
 
-If there are any updates to the branch, it seems that it is easier to delete the branch on git and redeploy.
+If there are any updates to the minter, push as per normal on the `master` branch and then run 
+```
+npm run deploy
+```
