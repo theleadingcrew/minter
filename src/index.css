@@ -42,9 +42,9 @@ button {
   padding: 9px 16px;
   max-height: 40px;
   /* box-shadow: 4px 4px 15px 0 rgb(0 0 0 / 20%); */
-  border-color: #254cdd;
-  color: #254cdd;
-  background-color: white;
+  border-color: white;
+  color: white;
+  background-color: black;
   border-radius: 8px;
   align-items: center;
   font-size: 16px;
@@ -75,6 +75,15 @@ button:hover {
   margin-bottom: 50px;
   line-height: 16px;
 }
+
+#connectButton {
+	text-align: center;
+	float: center;
+	margin-bottom: 50px;
+	line-height: 16px;
+	margin: 100 auto;
+  }
+
 /*
 #walletButton:focus {
   outline:none;
@@ -87,6 +96,6 @@ button:hover {
 
 #mintButton {
   margin-top: 40px;
-  background-color: #254cdd;
+  background-color: black;
   color:white;
 }

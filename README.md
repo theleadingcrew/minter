@@ -48,3 +48,4 @@ If there are any updates to the minter, push as per normal on the `master` branc
 ```
 npm run deploy
 ```
+Then go to github and reset the subdomain page.

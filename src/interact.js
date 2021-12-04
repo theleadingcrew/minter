@@ -1,4 +1,5 @@
 require("dotenv").config();
+
 const alchemyKey = process.env.REACT_APP_ALCHEMY_KEY;
 const contractAddress = process.env.REACT_APP_CONTRACT_ADDRESS;
 const contractABI = require("./contract-abi.json");
@@ -12,7 +13,7 @@ export const connectWallet = async () => {
         method: "eth_requestAccounts",
       });
       const obj = {
-        status: "👆🏽 Write a message in the text-field above.",
+        status: "Check that you are connected to the Ethereum Mainnet.",
         address: addressArray[0],
       };
       return obj;
@@ -50,7 +51,7 @@ export const getCurrentWalletConnected = async () => {
       if (addressArray.length > 0) {
         return {
           address: addressArray[0],
-          status: "👆🏽 Write a message in the text-field above.",
+          status: "Check that you are connected to the Ethereum Mainnet.",
         };
       } else {
         return {
@@ -83,10 +84,6 @@ export const getCurrentWalletConnected = async () => {
   }
 };
 
-async function loadContract() {
-  return new web3.eth.Contract(contractABI, contractAddress);
-}
-
 export const mint = async (mintAmount) => {
 	if (mintAmount.trim() == "") {
 	  return {
@@ -94,10 +91,12 @@ export const mint = async (mintAmount) => {
 		status: "❗Please make sure all fields are completed before minting.",
 	  };
 	}
-
-	//make metadata
-	const metadata = new Object();
-	metadata.mintAmount = mintAmount;
+	if (mintAmount > 6) {
+		return {
+		  success: false,
+		  status: "You can only mint a maximum of 6 NFTs.",
+		};
+	  }
 
 	window.contract = await new web3.eth.Contract(contractABI, contractAddress);
 
@@ -119,7 +118,7 @@ export const mint = async (mintAmount) => {
     return {
       success: true,
       status:
-        "✅ Check out your transaction on Etherscan: https://rinkeby.etherscan.io/tx/" +
+        "✅ Check out your transaction on Etherscan: https://etherscan.io/tx/" +
         txHash,
     };
   } catch (error) {
