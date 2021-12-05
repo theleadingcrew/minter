@@ -1,79 +1,79 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Cabin&family=Open+Sans:wght@300&family=Roboto:wght@300&display=swap');
 
 body {
-  margin: 0;
-  font-family: "Rubik";
-  color: white;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: black;
+	margin: 0;
+	font-family: "Cabin";
+	color: white;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background-color: black;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 .Minter {
-  max-width: 80vh;
-  max-height: 80vh;
-  padding: 60px 100px;
-  margin: 0 auto;
-  text-align: left;
+	max-width: 80vh;
+	max-height: 80vh;
+	padding: 60px 100px;
+	margin: 0 auto;
+	text-align: left;
 }
 
 input {
-  border-top-style: hidden;
-  border-right-style: hidden;
-  border-left-style: hidden;
-  border-bottom-style: groove;
-  font-size: 16px;
-  width: 100%;
-  border-color: rgba(4, 4, 5, 0.1);
-  line-height: 32px;
+	border-top-style: hidden;
+	border-right-style: hidden;
+	border-left-style: hidden;
+	border-bottom-style: groove;
+	font-size: 16px;
+	width: 100%;
+	border-color: rgba(4, 4, 5, 0.1);
+	line-height: 32px;
 }
 
 input:focus {
-  outline: none;
-  border-color: rgba(4, 4, 5, 0.4);
+	outline: none;
+	border-color: rgba(4, 4, 5, 0.4);
 }
 
 button {
-  padding: 9px 16px;
-  max-height: 40px;
-  /* box-shadow: 4px 4px 15px 0 rgb(0 0 0 / 20%); */
-  border-color: white;
-  color: white;
-  background-color: black;
-  border-radius: 8px;
-  align-items: center;
-  font-size: 16px;
-  font-weight: 500;
-  text-align: center;
-  font-weight: bold;
-  cursor: pointer;
+	padding: 9px 16px;
+	max-height: 40px;
+	/* box-shadow: 4px 4px 15px 0 rgb(0 0 0 / 20%); */
+	border-color: white;
+	color: white;
+	background-color: black;
+	border-radius: 8px;
+	align-items: center;
+	font-size: 16px;
+	font-weight: 500;
+	text-align: center;
+	font-weight: bold;
+	cursor: pointer;
 }
 
 button:hover {
-  margin-top: -1px;
+	margin-top: -1px;
 }
 
 #title {
-  padding-top: 32px;
+	padding-top: 32px;
 }
 
 .uploadFile {
-  border: 4px dashed rgba(4, 4, 5, 0.1);
-  border-radius: 16px;
-  text-align: center;
-  padding: 32px 60px;
+	border: 4px dashed rgba(4, 4, 5, 0.1);
+	border-radius: 16px;
+	text-align: center;
+	padding: 32px 60px;
 }
 
 #walletButton {
-  text-align: right;
-  float: right;
-  margin-bottom: 50px;
-  line-height: 16px;
+	text-align: right;
+	float: right;
+	margin-bottom: 50px;
+	line-height: 16px;
+	font-family: "Roboto";
 }
 
 #connectButton {
@@ -81,21 +81,14 @@ button:hover {
 	float: center;
 	margin-bottom: 50px;
 	line-height: 16px;
-	margin: 100 auto;
-  }
-
-/*
-#walletButton:focus {
-  outline:none;
-  border: none;
+	margin: 300 auto;
+	font-family: "Cabin";
+	font-size: 28px;
 }
-#walletButton:hover {
-  outline:none;
-  border :none;
-} */
 
 #mintButton {
-  margin-top: 40px;
-  background-color: black;
-  color:white;
+	margin-top: 40px;
+	background-color: black;
+	color:white;
+	font-family: "Roboto";
 }
