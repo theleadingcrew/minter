@@ -105,8 +105,8 @@ export const mint = async (mintAmount) => {
 		from: window.ethereum.selectedAddress, // must match user's active address.
 		value: (Number(6e16) * mintAmount).toString(16),
 		data: window.contract.methods
-			// .publicMint(mintAmount)
-			.presaleMint(mintAmount)
+			.publicMint(mintAmount)
+			// .presaleMint(mintAmount)
 			.encodeABI(),
 		gas: (Number(300000) * mintAmount).toString(16),
 	};
