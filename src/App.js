@@ -5,7 +5,7 @@ import {
 	getCurrentWalletConnected,
 	mint,
 } from "./interact.js";
-import gif from './img/promogif3.gif';
+import gif from './img/promo.gif';
 import logo from './img/tlc_logo_black.png';
 
 require("dotenv").config();
